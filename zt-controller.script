@@ -8,6 +8,12 @@
 #vi /config/vyos-docker-zt-controller-ui.sh
 #chmod +x /config/vyos-docker-zt-controller-ui.sh
 
+#Default credentials for UI: 
+#login: admin
+#password: zero-ui
+#url: http://127.0.0.1:4000
+#Details at https://github.com/dec0dOS/zero-ui
+
 #Prepare Space for ZT Controller Container
 mkdir -p /config/user-data/docker/zt/controller/data
 cd /config/user-data/docker/zt/controller
