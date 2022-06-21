@@ -1,0 +1,63 @@
+#This script for ZeroTier Agent
+#This was Tested with VyOS 1.3.1
+#INSTALL Docker on VyOS First! https://github.com/qdrddr/VyOS/blob/main/vyos-docker-install.script
+
+#On VyOS manually run these few commands:
+#sudo su
+#Create new file and copypaste this script (Re-run it after each VyOS update)
+#vi /config/vyos-docker-zt-agent.sh
+#chmod +x /config/vyos-docker-zt-agent.sh
+
+#Prepare Space for ZT Container
+mkdir -p /config/user-data/docker/zt/agent
+cd /config/user-data/docker/zt/agent
+
+#Create ZT Agent run file
+cat <<'EOF' | sudo tee ./docker-run.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+./docker-stop.sh
+
+docker run -d \
+    --name zerotier-one \
+    --net host \
+    --volume $DIR/data:/var/lib/zerotier-one \
+    --restart always \
+    --device=/dev/net/tun \
+    --cap-add=NET_ADMIN \
+    --cap-add=SYS_ADMIN \
+    zyclonite/zerotier
+#We are using this docker https://github.com/zyclonite/zerotier-docker
+docker ps -a
+docker exec zerotier-one zerotier-cli info
+echo "Now to join a ZT network run "
+echo "docker exec zerotier-one zerotier-cli join 8056c2e21c000001"
+echo "then go to your network and authorize your new node"
+echo "and then run ifconfig to find your new IP"
+echo "ifconfig -a"
+EOF
+
+#Create ZT Agent stop file
+cat <<'EOF' | sudo tee ./docker-stop.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+docker stop zerotier-one
+docker rm zerotier-one
+EOF
+
+#Make scripts Executiable
+chmod a+x *.sh
+
+#Start Agent
+./docker-run.sh
+
+docker exec zerotier-one zerotier-cli info
+echo "Now to join a ZT network run "
+echo "docker exec zerotier-one zerotier-cli join 8056c2e21c000001"
+echo "then go to your network and authorize your new node"
+echo "and then run ifconfig to find your new IP"
+echo "ifconfig -a"
