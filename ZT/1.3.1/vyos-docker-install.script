@@ -2,7 +2,7 @@
 
 #On VyOS manually run these few commands:
 #sudo su
-#Create new file and copypaste this script (Re-run it after each VyOS update)
+#Create a new file and copy-paste this script (Re-run it after each VyOS update)
 #vi /config/vyos-docker-install.sh
 #chmod +x /config/vyos-docker-install.sh
 
