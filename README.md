@@ -5,4 +5,4 @@
 # To make it work first install docker container app on VyOS
 # Then install either controller or agent containers on your VyOS
 
-#After each VyOS update you must re-run these scripts
+# After each VyOS update you must re-run these scripts
