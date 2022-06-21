@@ -9,7 +9,7 @@
 #chmod +x /config/vyos-docker-zt-controller-ui.sh
 
 #Prepare Space for ZT Controller Container
-mkdir - p /config/user-data/docker/zt/controller/data
+mkdir -p /config/user-data/docker/zt/controller/data
 cd /config/user-data/docker/zt/controller
 
 #create docker run script for controller
@@ -55,7 +55,7 @@ EOF
 ./docker-run.sh
 
 #Prepare Space for ZT UI Container
-mkdir - p /config/user-data/docker/zt/ui
+mkdir -p /config/user-data/docker/zt/ui
 cd /config/user-data/docker/zt/ui
 
 #create docker run script for UI
