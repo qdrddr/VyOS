@@ -7,7 +7,7 @@
 #Create a new file in the /config folder and copy-paste this script (Re-run it after each VyOS update)
 #vi /config/vyos-docker-zt-controller-ui.sh
 #chmod +x /config/vyos-docker-zt-controller-ui.sh
-#Echo "You will probably need to configure VyOS firewall to close access to TCP ports 4000 (UI) and 9994 (API) to protect access to the internet. (Steps are not included)"
+#Echo "You will probably need to configure the VyOS firewall to close access to TCP ports 4000 (UI) and 9994 (API) to protect access to the internet. (Steps are not included)"
 
 #Default credentials for UI: 
 #login: admin
