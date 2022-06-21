@@ -49,7 +49,7 @@ chmod a+x *.sh
 #Start Agent
 ./docker-run.sh
 
-docker exec zerotier-one zerotier-cli
+docker exec zerotier-one zerotier-cli info
 echo "Now to join a ZT network run "
 echo "docker exec zerotier-one zerotier-cli join 8056c2e21c000001"
 echo "then go to your network and authorize your new node"
