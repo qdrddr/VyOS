@@ -21,7 +21,7 @@ url: http://127.0.0.1:4000<br />
 Details about this container with [Zero-UI](https://github.com/dec0dOS/zero-ui)<br />
 Controller is [official ZT docker container](https://hub.docker.com/r/zerotier/zerotier)<br />
 
-# After each VyOS update, you must re-run these scripts<br />
+# After each VyOS update, you must re-run 2 of these scripts<br />
 
 Necessary to run first<br />
 sudo /config/vyos-docker-install.sh<br />
