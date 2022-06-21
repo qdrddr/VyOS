@@ -5,7 +5,7 @@
 #sudo su
 #Create new file and copypaste this script (Re-run it after each VyOS update)
 #vi /config/vyos-docker-install.sh
-#chmod +x vyos-docker-install.sh
+#chmod +x /config/vyos-docker-install.sh
 
 # Install docker req
 echo "deb http://deb.debian.org/debian $(lsb_release -cs) main contrib non-free" >> /etc/apt/sources.list
