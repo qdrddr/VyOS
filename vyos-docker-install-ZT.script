@@ -43,7 +43,7 @@ docker run -d \
     --cap-add=NET_ADMIN \
     --cap-add=SYS_ADMIN \
     zyclonite/zerotier
-
+#We are using this docker https://github.com/zyclonite/zerotier-docker
 docker ps -a
 EOF
 
