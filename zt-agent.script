@@ -9,7 +9,7 @@
 #chmod +x /config/vyos-docker-zt-agent.sh
 
 #Prepare Space for ZT Container
-mkdir - p /config/user-data/docker/zt/agent
+mkdir -p /config/user-data/docker/zt/agent
 cd /config/user-data/docker/zt/agent
 
 #Create ZT Agent run file
