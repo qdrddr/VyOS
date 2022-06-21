@@ -15,6 +15,7 @@ login: admin
 password: zero-ui
 url: http://127.0.0.1:4000
 
+
 Agent
 https://github.com/qdrddr/VyOS/blob/main/zt-agent.script
 Make a file in the /config folder, copy and paste content of the script and make it executable.
