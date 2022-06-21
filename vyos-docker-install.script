@@ -11,6 +11,7 @@
 echo "deb http://deb.debian.org/debian $(lsb_release -cs) main contrib non-free" >> /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+#will need this app as dependancy to cintinue, let me know if there is a better way
 sudo apt install timeshift
 # Add docker repo
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
