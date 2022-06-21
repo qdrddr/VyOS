@@ -7,9 +7,13 @@ Make a file in the /config folder, copy and paste content of the script and make
 
 # Then install either controller or agent containers on your VyOS
 
-Controller
+Controller:
 https://github.com/qdrddr/VyOS/blob/main/zt-controller.script
 Make a file in the /config folder, copy and paste content of the script and make it executable.
+Default credentials for UI:
+login: admin
+password: zero-ui
+url: http://127.0.0.1:4000
 
 Agent
 https://github.com/qdrddr/VyOS/blob/main/zt-agent.script
