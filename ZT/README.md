@@ -7,6 +7,9 @@ Make a file in the /config folder, copy and paste content of the script and make
 
 ## Then install either controller or agent containers on your VyOS
 
+[Agent](https://github.com/qdrddr/VyOS/blob/main/ZT/1.3.1/zt-agent.script)<br />
+Make a file in the /config folder, copy and paste content of the script and make it executable.
+
 [Controller](https://github.com/qdrddr/VyOS/blob/main/ZT/1.3.1/zt-controller.script)<br />
 Make a file in the /config folder, copy and paste content of the script and make it executable.<br />
 Default credentials for UI:<br />
@@ -14,9 +17,5 @@ login: admin<br />
 password: zero-ui<br />
 url: http://127.0.0.1:4000<br />
 Details at https://github.com/dec0dOS/zero-ui
-
-
-[Agent](https://github.com/qdrddr/VyOS/blob/main/ZT/1.3.1/zt-agent.script)<br />
-Make a file in the /config folder, copy and paste content of the script and make it executable.
 
 # After each VyOS update you must re-run these scripts
