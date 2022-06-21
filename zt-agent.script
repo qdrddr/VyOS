@@ -31,6 +31,7 @@ docker run -d \
     zyclonite/zerotier
 #We are using this docker https://github.com/zyclonite/zerotier-docker
 docker ps -a
+docker exec zerotier-one zerotier-cli info
 EOF
 
 #Create ZT Agent stop file
