@@ -25,13 +25,10 @@ Controller is [official ZT docker container](https://hub.docker.com/r/zerotier/z
 
 Necessary to run first<br />
 /config/vyos-docker-install.sh<br />
+Select one: Node or Controller<br />
 
 Node/Agent:<br />
-
-Select one: Node or Controller<br />
 /config/vyos-docker-zt-agent.sh<br />
 
 OR Controller<br />
-
-Select one: Node or Controller<br />
 /config/vyos-docker-zt-controller-ui.sh<br />
