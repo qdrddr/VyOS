@@ -57,3 +57,5 @@ docker rm zerotier-one
 EOF
 
 chmod a+x *.sh
+
+echo "Now to join a ZT network run docker exec zerotier-one zerotier-cli join 8056c2e21c000001"
