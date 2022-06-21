@@ -1,4 +1,5 @@
 # Run ZeroTier Agent or Controller as containers on VyOS router.<br />
+# Here is the [Article with HOWTO use these scripts](https://medium.com/@qdrddr/run-zerotier-on-vyos-router-de5aaf1da02b)
 ## You can run only Agent or only Controller;<br />
 ## You can run both. But! I guess its not a good idea to attach an agent to the controller that both runs on the same VyOS, because if your controller stops working you'll not be able to connect to your agent and that's like shooting into your own foot. FYI.<br />
 
