@@ -12,7 +12,8 @@
 mkdir - p /config/user-data/docker/zt/agent
 cd /config/user-data/docker/zt/agent
 
-cat <<'EOF' | sudo tee ./docker-start.sh
+#Create ZT Agent run file
+cat <<'EOF' | sudo tee ./docker-run.sh
 #!/bin/bash
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 cd $DIR
@@ -32,6 +33,7 @@ docker run -d \
 docker ps -a
 EOF
 
+#Create ZT Agent stop file
 cat <<'EOF' | sudo tee ./docker-stop.sh
 #!/bin/bash
 DIR="$( cd "$( dirname "$0" )" && pwd )"
@@ -41,7 +43,11 @@ docker stop zerotier-one
 docker rm zerotier-one
 EOF
 
+#Make scripts Executiable
 chmod a+x *.sh
+
+#Start Agent
+./docker-run.sh
 
 docker exec zerotier-one zerotier-cli
 echo "Now to join a ZT network run "
