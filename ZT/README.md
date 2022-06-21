@@ -22,3 +22,16 @@ Details about this container with [Zero-UI](https://github.com/dec0dOS/zero-ui)<
 Controller is [official ZT docker container](https://hub.docker.com/r/zerotier/zerotier)<br />
 
 # After each VyOS update, you must re-run these scripts<br />
+
+Necessary to run first<br />
+/config/vyos-docker-install.sh<br />
+
+Node/Agent:<br />
+
+Select one: Node or Controller<br />
+/config/vyos-docker-zt-agent.sh<br />
+
+OR Controller<br />
+
+Select one: Node or Controller<br />
+/config/vyos-docker-zt-controller-ui.sh<br />
