@@ -1,6 +1,6 @@
 # This is a repository to run ZeroTier Agent or Controller on VyOS router
-# You can run only Agent or only Controller; You can run both
-# I guess its not a good idea to attach an agent to the controller that runs on the save VyOS
+# You can run only Agent or only Controller; 
+# You can run both. But! I guess its not a good idea to attach an agent to the controller that runs on the save VyOS, because if your controller stops working you'll not be able to connect to your agent and that's like shooting into your own foot. FYI.
 
 # To make it work first install docker container app on VyOS
 # Then install either controller or agent containers on your VyOS
