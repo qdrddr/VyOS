@@ -17,6 +17,7 @@ Default credentials for UI:<br />
 login: admin<br />
 password: zero-ui<br />
 url: http://127.0.0.1:4000<br />
-Details about this container with [ZT Controller](https://github.com/dec0dOS/zero-ui)
+Details about this container with [Zero-UI](https://github.com/dec0dOS/zero-ui)
+Controller is [official ZT docker container](https://hub.docker.com/r/zerotier/zerotier)
 
 # After each VyOS update you must re-run these scripts
