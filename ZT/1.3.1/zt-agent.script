@@ -1,4 +1,4 @@
-#This script for ZeroTier Agent
+#This script for ZeroTier Node (Agent)
 #This was Tested with VyOS 1.3.1
 #INSTALL Docker on VyOS First! https://github.com/qdrddr/VyOS/blob/main/vyos-docker-install.script
 
