@@ -56,7 +56,7 @@ chmod a+x *.sh
 ./docker-run.sh
 
 docker exec zerotier-one zerotier-cli info
-echo "Now to join a ZT network run "
+echo "Now to join a ZT network run next command but change 8056c2e21c000001 to YOUR Network ID:"
 echo "docker exec zerotier-one zerotier-cli join 8056c2e21c000001"
 echo "then go to your network and authorize your new node"
 echo "and then run ifconfig to find your new IP"
