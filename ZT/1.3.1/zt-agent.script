@@ -52,7 +52,7 @@ EOF
 #Make scripts Executiable
 chmod a+x *.sh
 
-#Start Agent
+#Start Agent first time run twice
 ./docker-run.sh
 ./docker-run.sh
 
