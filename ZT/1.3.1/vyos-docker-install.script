@@ -30,5 +30,5 @@ sudo ln -s /config/user-data/docker/docker-compose /usr/local/bin/docker-compose
 sudo systemctl disable docker
 # We can autostart now
 echo 'systemctl start docker' >> /config/scripts/vyos-postconfig-bootup.script
-# Echo "After making changes to the firewall you have to run"
+echo "After making changes to the firewall you have to run"
 echo "systemctl restart docker"
