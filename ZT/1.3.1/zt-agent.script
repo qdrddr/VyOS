@@ -54,6 +54,7 @@ chmod a+x *.sh
 
 #Start Agent
 ./docker-run.sh
+./docker-run.sh
 
 docker exec zerotier-one zerotier-cli info
 echo "Now to join a ZT network run next command but change 8056c2e21c000001 to YOUR Network ID:"
