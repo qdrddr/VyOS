@@ -29,6 +29,7 @@ docker run -d \
     --cap-add=NET_ADMIN \
     --cap-add=SYS_ADMIN \
     zyclonite/zerotier
+    
 #We are using this docker https://github.com/zyclonite/zerotier-docker
 docker ps -a
 docker exec zerotier-one zerotier-cli info
@@ -53,7 +54,7 @@ EOF
 chmod a+x *.sh
 
 #Start Agent first time run twice
-./docker-run.sh
+docker pull zyclonite/zerotier
 ./docker-run.sh
 
 docker exec zerotier-one zerotier-cli info
