@@ -58,6 +58,9 @@ cat <<'EOF' | sudo tee ./data/local.conf
 EOF
 #Start Controller
 
+docker pull zerotier/zerotier
+#docker pull keynetworks/ztncui
+
 #make scripts executiable
 chmod a+x *.sh
 
