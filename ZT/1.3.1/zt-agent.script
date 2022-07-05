@@ -58,6 +58,7 @@ chmod a+x *.sh
 #Start Agent first time run twice
 docker pull zyclonite/zerotier
 docker pull zerotier/zerotier
+#docker pull keynetworks/ztncui
 ./docker-run.sh
 
 docker exec zerotier-one zerotier-cli info
