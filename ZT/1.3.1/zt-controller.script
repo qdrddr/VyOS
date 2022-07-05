@@ -47,8 +47,6 @@ docker stop zerotier_controller
 docker rm zerotier_controller
 EOF
 
-#make scripts executiable
-chmod a+x *.sh
 
 #Create config file for Controller API to work (needed for UI)
 cat <<'EOF' | sudo tee ./data/local.conf
@@ -59,6 +57,10 @@ cat <<'EOF' | sudo tee ./data/local.conf
 }
 EOF
 #Start Controller
+
+#make scripts executiable
+chmod a+x *.sh
+
 ./docker-run.sh
 
 #Prepare Space for ZT UI Container
