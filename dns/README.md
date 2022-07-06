@@ -1,5 +1,6 @@
-#Simple DNS server running as a container on VyOS</br>
-based on jpillora/dnsmasq docker container<br>
+# Simple DNS server running as a container on VyOS</br>
+based on [jpillora/dnsmasq](https://hub.docker.com/r/jpillora/dnsmasq/) docker container<br>
+this was tested with VyOS 1.3.1</br>
 Before you start make sure VyOS has DNS pointed to internet and working <br>
 in VyOS configure mode first run:</br>
 del system name-server</br>
