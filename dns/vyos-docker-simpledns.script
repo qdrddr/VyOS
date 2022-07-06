@@ -1,5 +1,6 @@
 #!/bin/bash
 #vi /config/vyos-docker-simpledns.sh
+#copy & paste content of this file
 #make executiable this file
 #sudo chmod a+x *.sh
 #install docker on VyOS first!
