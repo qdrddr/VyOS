@@ -31,7 +31,7 @@ Necessary to run first<br />
 sudo /config/vyos-docker-install.sh
 ```
 
-Select one: Node or Controller<br />
+### Select one: Node or Controller
 
 Node/Agent:<br />
 ```
