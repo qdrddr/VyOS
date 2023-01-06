@@ -28,7 +28,7 @@ Link: [vyos-docker-zt-controller-ui.sh](vyos-docker-zt-controller-ui.sh)
 **Default credentials for UI: **
 * login: admin
 * password: zero-ui
-* url: http://127.0.0.1:4000
+* url: http://127.0.0.1:4000 (or your VyOS IP)
 
 Details at https://github.com/dec0dOS/zero-ui
 
