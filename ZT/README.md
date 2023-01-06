@@ -8,11 +8,11 @@ Make a file in the /config folder, copy and paste content of the script and make
 
 ## Then install either controller or agent containers on your VyOS<br />
 
-[Agent](https://github.com/qdrddr/VyOS/blob/main/ZT/1.3.1/zt-agent.script)<br />
+[Agent](ZT/1.4.x/zt-agent.md)<br />
 Make a file in the /config folder, copy and paste content of the script and make it executable.<br />
 Details about this container with [ZT Agent](https://github.com/zyclonite/zerotier-docker)<br />
 
-[Controller](https://github.com/qdrddr/VyOS/blob/main/ZT/1.3.1/zt-controller.script)<br />
+[Controller](ZT/1.4.x/zt-controller.md)<br />
 Make a file in the /config folder, copy and paste content of the script and make it executable.<br />
 Default credentials for UI:<br />
 login: admin<br />
