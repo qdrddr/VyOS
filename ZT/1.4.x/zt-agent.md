@@ -19,7 +19,6 @@ INSTALL Docker on VyOS First! [Docker install on VyOS 1.4.1](docker/vyos-docker-
 ```
 
 ### Download the script and run (Re-run it after each VyOS update)
-```
 [vyos-docker-zt-agent.sh](vyos-docker-zt-agent.sh)
 * Change the ZT Network ID to your own  `ZT_NETWORK_ID="YOUR_NETWORK_ID"`
 ```
