@@ -27,11 +27,17 @@ Controller is [official ZT docker container](https://hub.docker.com/r/zerotier/z
 ## After each VyOS update, you must re-run 2 of these scripts<br />
 
 Necessary to run first<br />
-sudo /config/vyos-docker-install.sh<br />
+```
+sudo /config/vyos-docker-install.sh
+```
+
 Select one: Node or Controller<br />
 
 Node/Agent:<br />
-sudo /config/vyos-docker-zt-agent.sh<br />
-
+```
+sudo /config/vyos-docker-zt-agent.sh
+```
 OR Controller<br />
-sudo /config/vyos-docker-zt-controller-ui.sh<br />
+```
+sudo /config/vyos-docker-zt-controller-ui.sh
+```
