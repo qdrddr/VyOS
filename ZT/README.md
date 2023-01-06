@@ -5,7 +5,7 @@
 * You can run both. But! I guess its not a good idea to attach an agent to the controller that both runs on the same VyOS, because if your controller stops working you'll not be able to connect to your agent and that's like shooting into your own foot. FYI.
 
 
-To make it work first install docker container app on VyOS using [this script](docker/vyos-docker-install.md)<br />
+To make it work first install docker container app on VyOS using [this script](../docker/vyos-docker-install.md)<br />
 Make a file in the /config folder, copy and paste content of the script and make it executable.<br />
 
 **Then install either controller or agent containers on your VyOS**
