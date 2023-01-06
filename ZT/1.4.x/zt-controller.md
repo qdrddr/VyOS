@@ -1,0 +1,109 @@
+#This script for ZeroTier Controller + UI
+#This was Tested with VyOS 1.3.1
+#INSTALL Docker on VyOS First! https://github.com/qdrddr/VyOS/blob/main/docker/vyos-docker-install.script
+
+#On VyOS manually run these few commands:
+#sudo su
+#Create a new file in the /config folder and copy-paste this script (Re-run it after each VyOS update)
+#vi /config/vyos-docker-zt-controller-ui.sh
+#chmod +x /config/vyos-docker-zt-controller-ui.sh
+#Echo "You will probably need to configure the VyOS firewall to close access to TCP ports 4000 (UI) and 9994 (API) to protect access to the internet. (Steps are not included)"
+
+#Default credentials for UI: 
+#login: admin
+#password: zero-ui
+#url: http://127.0.0.1:4000
+#Details at https://github.com/dec0dOS/zero-ui
+
+#Prepare Space for ZT Controller Container
+mkdir -p /config/user-data/docker/zt/controller/data
+cd /config/user-data/docker/zt/controller
+
+#create docker run script for controller
+#!/bin/bash
+cat <<'EOF' | sudo tee ./docker-run.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+./docker-stop.sh
+
+docker run -d \
+    --name zerotier_controller \
+    --net host \
+    --volume $DIR/data:/var/lib/zerotier-one \
+    --restart always \
+    zerotier/zerotier
+
+docker ps -a
+EOF
+
+#create docker stop script for controller
+cat <<'EOF' | sudo tee ./docker-stop.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+docker stop zerotier_controller
+docker rm zerotier_controller
+EOF
+
+
+#Create config file for Controller API to work (needed for UI)
+cat <<'EOF' | sudo tee ./data/local.conf
+{
+        "settings": {
+                "primaryPort": 9994
+        }
+}
+EOF
+#Start Controller
+
+docker pull zerotier/zerotier
+#docker pull keynetworks/ztncui
+
+#make scripts executiable
+chmod a+x *.sh
+
+./docker-run.sh
+
+#Prepare Space for ZT UI Container
+mkdir -p /config/user-data/docker/zt/ui
+cd /config/user-data/docker/zt/ui
+
+#create docker run script for UI
+cat <<'EOF' | sudo tee ./docker-run.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+./docker-stop.sh
+
+docker run -d \
+        --restart always \
+        --name zero-ui \
+        --net host \
+        -v $DIR/../controller/data:/var/lib/zerotier-one \
+        -v $DIR/data:/app/backend/data \
+        -e ZU_CONTROLLER_ENDPOINT=http://127.0.0.1:9994/ \
+        -e ZU_SECURE_HEADERS=false \
+        -e ZU_DEFAULT_USERNAME=admin \
+        -e ZU_DEFAULT_PASSWORD=zero-ui \
+        dec0dos/zero-ui:latest
+
+docker ps -a
+EOF
+
+#create docker stop script for UI
+cat <<'EOF' | sudo tee ./docker-stop.sh
+#!/bin/bash
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cd $DIR
+
+docker stop zero-ui
+docker rm zero-ui
+EOF
+
+chmod a+x *.sh
+#Start UI
+./docker-run.sh
