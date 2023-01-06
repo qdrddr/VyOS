@@ -2,7 +2,7 @@
 #### This was Tested with VyOS 1.4.x
 
 ## Requirements
-INSTALL Docker on VyOS First! [Docker install on VyOS 1.4.1](docker/vyos-docker-install.md)
+INSTALL Docker on VyOS First! [Docker install on VyOS 1.4.1](../../docker/vyos-docker-install.md)
 
 ## Switch to root user and run the commands below.
 ```
